@@ -53,4 +53,5 @@ dependencies {
     implementation 'com.huawei.android.hms:push:2.6.1.301'
     implementation files('libs/MiPush_SDK_Client_3_6_9.jar')
     implementation 'pub.devrel:easypermissions:1.2.0'
+    implementation(group: 'com.meizu.flyme.internet', name: 'push-internal', version: '3.5.0', ext: 'aar')
 }

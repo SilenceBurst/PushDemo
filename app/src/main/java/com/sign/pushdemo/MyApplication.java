@@ -3,10 +3,15 @@ package com.sign.pushdemo;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.util.Log;
 import android.os.Process;
 
 
+import com.meizu.cloud.pushinternal.DebugLogger;
+import com.meizu.cloud.pushsdk.PushManager;
+import com.meizu.cloud.pushsdk.util.MzSystemUtils;
 import com.xiaomi.channel.commonutils.logger.LoggerInterface;
 import com.xiaomi.mipush.sdk.Logger;
 import com.xiaomi.mipush.sdk.MiPushClient;
@@ -58,6 +63,9 @@ public class MyApplication extends Application {
                 }
             };
             Logger.setLogger(this, newLogger);
+        } else if (MzSystemUtils.isBrandMeizu()) {
+            //魅族推送只适用于Flyme系统,因此可以先行判断是否为魅族机型，再进行订阅，避免在其他机型上出现兼容性问题
+            PushManager.register(this, "114724", "c88cf5b574c84565a44856169cad3568");
         }
     }
 

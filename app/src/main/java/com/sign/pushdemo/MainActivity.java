@@ -4,10 +4,13 @@ import android.Manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.huawei.android.hms.agent.HMSAgent;
 import com.huawei.android.hms.agent.common.handler.ConnectHandler;
 import com.huawei.android.hms.agent.push.handler.GetTokenHandler;
+import com.meizu.cloud.pushsdk.PushManager;
+import com.meizu.cloud.pushsdk.util.MzSystemUtils;
 
 import pub.devrel.easypermissions.EasyPermissions;
 
