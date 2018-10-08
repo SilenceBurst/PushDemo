@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'pushdemo'
             keyPassword '123456'
-            storeFile file('E:/demo/PushDemo/keystore/pushdemo.jks')
+            storeFile file('../keystore/pushdemo.jks')
             storePassword '123456'
         }
     }
